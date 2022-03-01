@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function Trail1(chr, strength) {
+            if (strength > 50) {
+                return chr + "🗡️";
+            } else {
+                throw Error(chr + "🐍");
+            }
+        }
+        function Trail2(chr, iq) {
+            if (iq > 90) {
+                return chr + "💰💍👑";
+            } else {
+                throw Error("💀");
+            }
+        }
+        const hero = (age, character) =>
+            new Promise((resolve, reject) => {
+                if (age > 18) {
+                    setTimeout(()=>resolve(character), 5000);
+                } else {
+                    reject("👶 Try after few years");
+                }
+            });
+
+        function Dungeon() {
+            // Promise object
+        //   hero (20,"😎")
+        //   .then(chr => Trail1(chr,100))
+        //   .then(chrWithSword => Trail2(chrWithSword,120))
+        //   .then(result=>console.log(result))
+        // }
+
+        // hero (14,"😎")
+        //   .then(chr => Trail1(chr,100))
+        //   .then(chrWithSword => Trail2(chrWithSword,120))
+        //   .then(result=>console.log(result))
+        //   .catch(errMsg=>console.log("🏥" + errMsg))
+        // }
+        // hero (25,"😎")
+        //   .then(chr => Trail1(chr,45))
+        //   .then(chrWithSword => Trail2(chrWithSword,120),  chrWithSnake => Trail2(chrWithSnake,140))
+        //   .then(result=>console.log(result))
+        //   .catch(errMsg=>console.log("🏥" + errMsg))
+        //  }
+
+// comeback
+         hero (25,"😎")
+          .then(chr => Trail1(chr,45))
+          .then(chrWithSword => Trail2(chrWithSword,120),  chrWithSnake => Trail2(chrWithSnake,50))
+          .then(result=>console.log(result), skull => console.log("Failed", skull))
+          .catch(errMsg=>console.log("🏥" + errMsg))
+         }
+
+
+
+
+
+
+
+        Dungeon();
+
+
+    </script>
+
+</body>
+
+</html>

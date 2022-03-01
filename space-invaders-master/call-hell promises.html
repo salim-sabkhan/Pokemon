@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body{
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  </style>
+</head>
+<body>
+  
+  <!-- <h1 class="countdown">10</h1> -->
+
+  <script>
+    
+
+     //function callbackHell () {
+    //   let countdown = 10;
+    // setTimeout(() => {
+    //   document.querySelector(".countdown").innerText = --countdown;
+    //     setTimeout(() => {
+    //       document.querySelector(".countdown").innerText = --countdown;
+    //     setTimeout(() => {
+    //       document.querySelector(".countdown").innerText = --countdown;
+    //       setTimeout(() => {
+    //         document.querySelector(".countdown").innerText = --countdown;
+    //         setTimeout(() => {
+    //           document.querySelector(".countdown").innerText = --countdown;
+    //           setTimeout(() => {
+    //             document.querySelector(".countdown").innerText = --countdown;
+    //             setTimeout(() => {
+    //               document.querySelector(".countdown").innerText = --countdown;
+    //               setTimeout(() => {
+    //                 document.querySelector(".countdown").innerText = --countdown;
+    //                 setTimeout(() => {
+    //                   document.querySelector(".countdown").innerText = --countdown;
+    //                   setTimeout(() => {
+    //                     document.querySelector(".countdown").innerText = "Happy Inependence Day";
+    //                   }, 1000);
+    //                 }, 1000);
+    //             }, 1000);
+    //           }, 1000);
+    //         }, 1000);
+    //       }, 1000);
+    //     }, 1000);
+    //   }, 1000);
+    // }, 1000);
+    // }, 1000);
+    // }
+
+    
+// function promiseWay () {
+    
+  const msg = (countdown) =>
+  new Promise((resolve, reject) => {
+                    if (countdown ≥ 1) {
+                    setTimeout(()=> {
+                      document.querySelector(".countdown").innerText = countdown;
+                    resolve(countdown)
+                }, 1000)
+                } else {
+                    reject("👶 Try after few years");
+                }
+            });
+ msg(9)
+.then(n => msg(--n))
+.then(n => msg(--n))
+.then(n => msg(--n))
+.then(n => msg(--n))
+.then(n => msg(--n))
+.then(n => msg(--n))
+.then(n => msg(--n))
+.then(n => msg(--n))
+// .then(
+//   () => console.log("Succsess Path"), 
+//   () => {
+//   setTimeout(() => {
+//   document.querySelector(".countdown").innerText = "Happy Inependence Day";
+//   },300)
+//   }
+//   );
+// }
+
+// .catch(() => {
+//   setTimeout(() => {
+//   document.querySelector(".countdown").innerText = "Happy Inependence Day";
+//   },300)
+// })
+
+// .then(
+//   ()console.log("success path")
+
+
+
+// fetch("https://restcountries.com/v3.1/all")
+// .then ((data) => data.json())
+// .then((countries) => countries.filter(countries => countries.population > 1_00_00_000))
+//.then((countries) => countries.map(countries => countries.name.official))
+// .then((result) => console.log(result));
+
+
+
+// //.then((countries) => 
+// //countries.filter((countries) => countries.languages && countries.languages.spa)
+// //)
+
+// fetch("https://restcountries.com/v3.1/all")
+// .then ((data) => data.json())
+// .then((countries) => 
+// countries.filter((countries) => countries?.languages.spa))
+// //.then((countries) => countries.map(countries => countries.name.official))
+// .then((result) => console.log(result)
+// );
+
+  </script>
+ </body>
+ </html>
